@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Configurações básicas do documento HTML -->
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o layout para dispositivos móveis -->
+  <title>Jogo Dino Reimaginado</title> <!-- Título da página -->
+  
+  <!-- Link para o arquivo de estilo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Link para o arquivo de script JavaScript -->
+  <script src="js/script.js" defer></script> <!-- "defer" garante que o script será carregado após o HTML -->
+</head>
+<body>
+  <!-- Título do jogo -->
+  <h1 class="game-title">Jogo Dino Reimaginado</h1> <!-- Exibe o nome do jogo centralizado no topo -->
+
+  <!-- Container principal do jogo -->
+  <div class="game-container">
+    <div class="dino"></div> <!-- Representa o dinossauro -->
+    <div class="background"></div> <!-- Representa o fundo do jogo -->
+  </div>
+
+  <!-- Exibição da pontuação -->
+  <div class="score-board">
+    Pontuação: <span id="score">0</span> <!-- Exibe a pontuação inicial como 0 -->
+  </div>
+
+  <!-- Botão para iniciar o jogo -->
+  <button class="start-btn">Iniciar Jogo</button> <!-- Botão que inicia o jogo -->
+
+  <!-- Quadro com orientações do jogo -->
+  <div class="game-rules">
+    <h2>Orientações do Jogo</h2> <!-- Título do quadro -->
+    <ul>
+      <!-- Lista com as instruções para jogar -->
+      <li>Pressione a tecla <b>Espaço</b> para fazer o Dino pular.</li>
+      <li>Evite colidir com os cactos que vêm da direita para a esquerda.</li>
+      <li>A cada cacto evitado, sua pontuação aumenta.</li>
+      <li>Se o Dino colidir com um cacto, o jogo termina.</li>
+      <li>Pressione o botão "Iniciar Jogo" para começar ou reiniciar o jogo.</li>
+    </ul>
+  </div>
+</body>
+</html>

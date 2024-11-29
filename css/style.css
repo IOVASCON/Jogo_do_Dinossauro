@@ -1,0 +1,152 @@
+/* Estilo do corpo geral do jogo */
+body {
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o preenchimento padrão do navegador */
+    display: flex; /* Usa flexbox para organizar os elementos */
+    flex-direction: column; /* Organiza os elementos na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    background-color: #f0f0f0; /* Define uma cor de fundo clara */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    overflow: hidden; /* Esconde elementos que ultrapassam os limites */
+    height: 100vh; /* Define a altura como 100% da janela */
+}
+
+/* Container principal do jogo */
+.game-container {
+    position: relative; /* Define como referência para os elementos filhos */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 200px; /* Altura fixa para o container */
+    overflow: hidden; /* Esconde elementos que ultrapassam o limite */
+    animation: moveBackground 10s linear infinite; /* Faz o fundo se mover continuamente */
+}
+
+/* Animação do fundo */
+@keyframes moveBackground {
+    from {
+        background-position: 0; /* Posição inicial do fundo */
+    }
+    to {
+        background-position: -1000px; /* Desloca o fundo para a esquerda */
+    }
+}
+
+/* Estilo do dinossauro */
+.dino {
+    position: absolute; /* Posiciona em relação ao container */
+    bottom: 0; /* Alinha na base do container */
+    left: 50px; /* Define a posição horizontal inicial */
+    width: 60px; /* Largura fixa */
+    height: 60px; /* Altura fixa */
+    background: url('../assets/dino/dino1.png') no-repeat; /* Imagem inicial do dinossauro */
+    background-size: cover; /* Faz a imagem ocupar todo o espaço disponível */
+    animation: dinoRun 0.5s steps(3) infinite; /* Animação do movimento do dinossauro */
+    z-index: 10; /* Garante que o dinossauro fique acima do fundo */
+}
+
+/* Animação do movimento do dinossauro */
+@keyframes dinoRun {
+    0% {
+        background-image: url('../assets/dino/dino1.png'); /* Primeira imagem */
+    }
+    50% {
+        background-image: url('../assets/dino/dino2.png'); /* Segunda imagem */
+    }
+    100% {
+        background-image: url('../assets/dino/dino3.png'); /* Terceira imagem */
+    }
+}
+
+/* Estilo do cacto */
+.cactus {
+    position: absolute; /* Posiciona em relação ao container */
+    bottom: 0; /* Alinha na base do container */
+    width: 50px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    background-size: cover; /* Faz a imagem ocupar todo o espaço disponível */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    z-index: 5; /* Coloca o cacto acima do fundo, mas abaixo do dinossauro */
+}
+
+/* Estilo do fundo */
+.background {
+    position: absolute; /* Posiciona em relação ao container */
+    bottom: 0; /* Alinha na base do container */
+    width: 100%; /* Ocupa toda a largura do container */
+    height: 200px; /* Altura fixa */
+    background: url('../assets/background/background1.png') repeat-x; /* Imagem do fundo que se repete horizontalmente */
+    animation: moveBackground 10s linear infinite; /* Animação do movimento do fundo */
+    z-index: 1; /* Garante que o fundo fique atrás de todos os elementos */
+}
+
+/* Estilo do placar */
+.score-board {
+    position: absolute; /* Posiciona em relação ao corpo da página */
+    top: 20px; /* Define a distância do topo */
+    left: 20px; /* Define a distância da esquerda */
+    font-size: 20px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo do botão "Iniciar Jogo" */
+.start-btn {
+    position: absolute; /* Posiciona em relação ao corpo da página */
+    top: 60px; /* Define a distância do topo */
+    right: 20px; /* Define a distância da direita */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar por cima */
+    background-color: #4caf50; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    z-index: 15; /* Coloca o botão acima de outros elementos */
+}
+
+/* Estilo do quadro de orientações do jogo */
+.game-rules {
+    position: absolute; /* Posiciona em relação ao corpo da página */
+    bottom: 10px; /* Define a distância da base */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar */
+    width: 80%; /* Largura relativa à largura da página */
+    background-color: #fff; /* Fundo branco */
+    border: 2px solid #4caf50; /* Borda verde */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor do quadro */
+    z-index: 20; /* Coloca o quadro acima de todos os elementos */
+}
+
+/* Estilo do título do quadro de orientações */
+.game-rules h2 {
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo da lista de orientações */
+.game-rules ul {
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamento interno */
+    list-style: none; /* Remove marcadores da lista */
+}
+
+/* Estilo de cada item da lista */
+.game-rules li {
+    font-size: 16px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    margin-bottom: 5px; /* Espaçamento inferior */
+}
+
+/* Destaque para textos importantes */
+.game-rules li b {
+    color: #000; /* Texto em negrito com cor preta */
+}

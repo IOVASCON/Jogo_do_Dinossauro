@@ -26,10 +26,10 @@ O projeto está organizado em uma estrutura de diretórios simples, como mostrad
 
 ## Imagens do Desenvolvimento Aplicação
 
-![Script de Criação Automática do Projeto](img_dev/Criacao_Estrutura_Projeto.png)
-![Estrutura do Projeto](img_dev/Estrutura_Pastas_Arquivos.png)
-![Tela Inicial do Jogo](img_dev/Tela_Inicial_Aplicacao.png)
-![Execução do Jogo](img_dev/Executando_Jogo.png)
+![Script de Criação Automática do Projeto](img_dev/Criacao_Estrutura_Projeto.PNG)
+![Estrutura do Projeto](img_dev/Estrutura_Pastas_Arquivos.PNG)
+![Tela Inicial do Jogo](img_dev/Tela_Inicial_Aplicacao.PNG)
+![Execução do Jogo](img_dev/Executando_Jogo.PNG)
 
 ## Melhorias Futuras
 
